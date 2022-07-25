@@ -37,6 +37,7 @@ addLayer('j', {
 	row: 0, // Row the layer is in on the tree (0 is the first row)
 	hotkeys: [
 		{ key: 'ctrl+s', description: 'Ctrl+S: Save the game', unlocked: true, onPress() {
+			doPopup('none', 'Game saved!', 'System Message', 3, '#888888');
 			save(true);
 		} },
 		{ key: 'j', description: 'J: Reset for J points', onPress() {
