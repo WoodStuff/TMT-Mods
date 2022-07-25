@@ -1,0 +1,18 @@
+* {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html {
+	background-color: #eeeeee;
+}
+
+a {
+	color: #0000d0;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+	color: #4747eb;
+}
+a:active {
+	color: limegreen;
+}
