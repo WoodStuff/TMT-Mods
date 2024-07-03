@@ -42,7 +42,6 @@ addLayer('b', {
 		return exp;
 	},
 	hotkeys: [
-		{ key: 'ctrl+s', description: 'Ctrl+S: Save the game', onPress() { save(true) } },
 		{ key: 'b', description: 'B: Reset for beginner power', onPress() { if (canReset(this.layer)) doReset(this.layer) } },
 	],
 	layerShown() { return true },
@@ -127,7 +126,7 @@ addLayer('b', {
 		13: {
 			title: 'Cubed',
 			description: 'Beginner cubes boost beginner power gain',
-			cost: new Decimal(5),
+			cost: new Decimal(12),
 			unlocked() { return hasUpgrade(this.layer, 12) },
 			effect() {
 				eff = player.b.cubes.add(1).log(3).add(1);

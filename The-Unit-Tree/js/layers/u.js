@@ -12,6 +12,7 @@ addLayer('u', {
 	resource: 'units', 
 	type: 'custom', 
 	hotkeys: [
+		{ key: 'ctrl+s', description: 'Ctrl+S: Save the game', onPress() { save(true) } },
 		{ key: 'u', description: 'U: Gain an unit', onPress() { if (canReset(this.layer)) doReset(this.layer) } },
 	],
 	layerShown() { return true },
