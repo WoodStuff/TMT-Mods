@@ -26,28 +26,4 @@ addLayer('b', {
 		{ key: 'ctrl+s', description: 'Ctrl+S: Save the game', onPress() { save() } },
 	],
 	layerShown() { return true; },
-	upgrades: {
-		11: {
-			title: 'Basic Boost',
-			description: 'Basic points increase point production speed',
-			cost: 1,
-			effect() {
-				eff = player[this.layer].points.plus(2).sqrt()
-				eff = softcap(eff, 25000, 0.25);
-				return eff;
-			},
-			effectDisplay() { return `${format(upgradeEffect('b', 11))}x` }
-		},
-		12: {
-			title: 'Basic Boost',
-			description: 'Gain more points based on your basic points',
-			cost: 5,
-			effect() {
-				eff = player[this.layer].best.plus(1).sqrt()
-				eff = softcap(eff, 25000, 0.25);
-				return eff;
-			},
-			effectDisplay() { return `${format(upgradeEffect('b', 11))}x` }
-		},
-	},
 });
